@@ -127,7 +127,7 @@ def all_clients(cur):
 if __name__ == '__main__':
     with psycopg2.connect(database="netology_clients_db", user="postgres", password="postgres") as conn:
         with conn.cursor() as cur:
-            # create_db(conn, cur)
+            create_db(conn, cur)
 
             # all_clients(cur)
 
@@ -157,13 +157,13 @@ if __name__ == '__main__':
             # delete_phone(cur, '1', '777-45-33')
             # delete_phone(cur, '1', '777-45-34')
             #
-            all_clients(cur)
+            # all_clients(cur)
             #
             # find_client(cur, 'Мария')
             # find_client(cur, None, 'Иванов')
             # find_client(cur, None, None, 'belozub@gmail.com')
             # find_client(cur, None, None, None, '234-45-45')
             #
-            delete_client(cur, 5)
+            # delete_client(cur, 5)
             #
             all_clients(cur)
